@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkDialog" id="dialog1">
+      <property name="title">Replace x</property>
+      <property name="resizable">False</property>
+    <child>
+        <object class="GtkEventControllerKey" id="dialog_controller">
+            <property name="name">d_controller</property>
+        </object>
+    </child>
+    <child internal-child="content_area">
+      <object class="GtkBox" id="vbox1">
+            <property name="visible">True</property>
+            <property name="margin_top">10</property>
+            <property name="margin_bottom">10</property>
+            <property name="margin_start">10</property>
+            <property name="margin_end">10</property>
+            <property name="orientation">vertical</property>
+            <property name="homogeneous">True</property>
+            <property name="spacing">10</property>
+        <child>
+            <object class="GtkBox" id="hbox1">
+                <property name="visible">True</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <property name="margin_start">10</property>
+                <property name="margin_end">10</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">10</property>
+                <property name="hexpand">True</property>
+                <child>
+                    <object class="GtkLabel" id="dialog_label">
+                        <property name="label">Input value</property>
+                    </object>
+                </child>
+                <child>
+                    <object class="GtkEntry" id="dialog_entry">
+                        <property name="visible">True</property>
+                        <property name="max_length">100</property>
+                        <property name="has_frame">True</property>
+                        <property name="can_focus">False</property>
+                    </object>
+                </child>
+            </object>
+        </child>
+        <child internal-child="action_area">
+          <object class="GtkBox" id="hbuttonbox1">
+                <property name="margin_start">50</property>
+                <property name="margin_end">50</property>
+                <property name="margin_bottom">10</property>
+                <property name="hexpand">True</property>
+                <property name="visible">True</property>
+                <property name="orientation">horizontal</property>
+                <property name="homogeneous">True</property>
+                <property name="spacing">100</property>
+                <property name="can_focus">False</property>
+            <child>
+              <object class="GtkButton" id="ok_button">
+                <property name="label" translatable="yes">_Ok</property>
+                <property name="use-underline">True</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="cancel_button">
+                <property name="label" translatable="yes">_Cancel</property>
+                <property name="use-underline">True</property>
+                <!-- <signal name="clicked" handler="ok_button_clicked"/> -->
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <action-widgets>
+        <action-widget response="cancel">cancel_button</action-widget>
+        <action-widget response="ok" default="true">ok_button</action-widget>
+    </action-widgets>
+  </object>
+</interface>

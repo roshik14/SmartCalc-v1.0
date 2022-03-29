@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkWindow" id="graph_window">
+      <property name="title">Function graph</property>
+      <property name="default_width">600</property>
+      <property name="default_height">400</property>
+      <property name="resizable">False</property>
+      <property name="can_focus">False</property>
+      <child>
+          <object class="GtkDrawingArea" id="draw_area">
+              <property name="visible">True</property>
+              <property name="can_focus">False</property>
+              <property name="content_width">600</property>
+              <property name="content_height">400</property>
+          </object>
+      </child>
+  </object>
+</interface>
